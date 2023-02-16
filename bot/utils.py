@@ -19,9 +19,15 @@ def write_chat_to_csv(file_path, message):
 
 
 def check_chat_id_from_csv(file_path, chat_id):
-    with open(file_path, encoding="utf8") as f:
+    with open(file_path, encoding="utf-8") as f:
         csv_reader = csv.DictReader(f)
         return chat_id in [int(row.get("chat_id")) for row in csv_reader]
+
+
+def check_username_from_csv(file_path, user_name):
+    with open(file_path, encoding="utf-8") as f:
+        csv_reader = csv.DictReader(f)
+        return user_name in [row.get("trello_username") for row in csv_reader]
 
 
 def get_trello_username_by_chat_id(file_path, chat_id):
@@ -32,7 +38,6 @@ def get_trello_username_by_chat_id(file_path, chat_id):
             for row in csv_reader
             if int(row.get("chat_id")) == chat_id
         ]
-        print(users)
     return users[0] if users else None
 
 
