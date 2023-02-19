@@ -1,4 +1,4 @@
-chats.csv
+
 venv
 .idea
 # Byte-compiled / optimized / DLL files
@@ -39,6 +39,7 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+
 
 # Unit test / coverage reports
 htmlcov/
@@ -131,3 +132,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .idea/
+
+chats.csv
