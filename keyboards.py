@@ -55,7 +55,8 @@ def get_inline_lists_btn(trello, board_id, action):
         last_list = None
     else:
         last_list = lists.pop()
-    for i in range(len(lists) - 1, 2):
+    for i in range(0, len(lists) - 1, 2):
+        print(len(lists))
         lists_inline_btn.add(
             InlineKeyboardButton(
                 lists[i].get("name"),

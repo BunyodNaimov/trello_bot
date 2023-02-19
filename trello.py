@@ -52,7 +52,6 @@ class TrelloManager:
             params=params
         )
         if response.status_code == 200:
-            print("JSON", json.loads(response.text))
             return json.loads(response.text)
 
     def get_boards(self):
@@ -132,7 +131,6 @@ class TrelloManager:
             return json.loads(response.text)
 
     def create_new_card(self, params):
-        print("PARAM", params)
 
         url = "https://api.trello.com/1/cards"
 
