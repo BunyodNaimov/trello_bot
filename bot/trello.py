@@ -192,5 +192,3 @@ class TrelloManager:
         )
         if response.status_code == 200:
             return json.loads(response.text)
-
-# trello = TrelloManager("bunyodnaimov")
