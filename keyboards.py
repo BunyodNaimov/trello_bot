@@ -138,7 +138,7 @@ def get_inline_btn_labels(user_name, board_id, action):
 
 
 def get_inline_cards_btn(chat_id, list_id, action):
-    trello_username = get_trello_username_by_chat_id("../chats.csv", chat_id)
+    trello_username = get_trello_username_by_chat_id("chats.csv", chat_id)
     data = TrelloManager(trello_username).get_cards_on_a_list(list_id)
     cards_btn = []
     for i in data:
