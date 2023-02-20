@@ -160,7 +160,6 @@ def get_inline_cards_btn(chat_id, list_id, action):
                                  callback_data=f"{action}_{list(cards_btn[i + 1].values())[0]}")
         )
     if btn:
-        print(btn)
         inline_cards_btn.add(
             InlineKeyboardButton(list(btn.keys())[0],
                                  callback_data=f"{action}_{list(btn.values())[0]}")
