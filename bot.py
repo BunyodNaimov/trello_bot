@@ -26,7 +26,13 @@ def welcome(message):
 
 # /cancel
 @bot.message_handler(commands=["cancel"])
-def welcome(message):
+def cancel(message):
+    bot.send_message(message.chat.id, messages.CANCEL)
+
+
+# /cancel
+@bot.message_handler(commands=["cancel"], state="*")
+def cancel_card_create_state(message):
     bot.send_message(message.chat.id, messages.CANCEL)
 
 
